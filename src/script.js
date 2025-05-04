@@ -2,7 +2,7 @@ const smt = document.getElementById('Sbmt');
 const ShowStudentRecord = document.getElementById('S_S_R');
 
 
-const Student_data = {
+const Student_data = {                                                          //Created the object for all the record entry
     student_first_name : '',
     student_last_name : '',
     Student_ID : '',
@@ -10,7 +10,7 @@ const Student_data = {
     Student_Phone : ''
 }
 
-const get_value = () => {
+const get_value = () => {                                                           //Assign the value in object values once we enter all the detail and hit enter                                  
     Student_data.student_first_name = document.getElementById('FNM').value;
     Student_data.student_last_name = document.getElementById('Last_name').value;
     Student_data.Student_ID = document.getElementById('St_id').value;
@@ -22,7 +22,7 @@ const get_value = () => {
 
 
 
-smt.addEventListener('click',(e)=>{
+smt.addEventListener('click',(e)=>{                                         //Add eventlistner once hit submit it will validate the entry and after that it store the value in Local storage making Student ID as a Key all student record as value. 
     e.preventDefault();
     get_value();
 
@@ -50,7 +50,7 @@ smt.addEventListener('click',(e)=>{
     
 });
 
-ShowStudentRecord.addEventListener('click',()=>{
+ShowStudentRecord.addEventListener('click',()=>{                  //Once Show record button hit this event listner calls and it will show the record.
     let cards = '';
     const sRecord = document.getElementById('Student_record');
     // console.log(localStorage.length);
@@ -81,7 +81,7 @@ ShowStudentRecord.addEventListener('click',()=>{
       }}
 })
 
-function deleteData(Delete_student_record){
+function deleteData(Delete_student_record){                                              //delete the record from local storage and reload the page
     localStorage.removeItem(Delete_student_record);
     alert(`Student ID - ${Delete_student_record} Record has been deleted`);
     window.location.reload();
