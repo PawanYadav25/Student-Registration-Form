@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration form</title>
+    <link rel="stylesheet" href="./output.css">
+
+</head>
+<body class="bg-[url('./BG_image.webp')] bg-cover">
+    <header class="bg-black h-15 text-white flex justify-around items-center w-full">   <!-- Header start -->
+        <div class="p-2">
+            <img class="h-14" src="./Education_logo.png" alt="Education logo">
+        </div>
+        <div class="hidden md:flex text-3xl">
+             Pawan Couching Student Registration form
+        </div>
+
+        <div popover id="Guide" class=" mx-auto my-auto p-5 rounded-3xl border-black border-4 bg-blue-300">
+            <h1 class="text-4xl">Small Guide</h1><br>
+            <p>1. Every Field is necessary.</p>
+            <p>2. Student ID Should be unique.</p>
+            <p>3. Email ID should have contain @ in it.</p>
+            <p>4. Phone number should be length of 10 digit.</p>
+            <p>5. For edit the student record please enter the Student ID enter the update value and in other value enter same as before.</p>
+        </div>
+        <div  class="mr-6">
+            <button popovertarget="Guide">Guide</button></div>
+    </header>                                                                       <!-- Header End -->
+    <section>                                                                       <!-- Form Section Start -->
+        <article class=" bg-gray-200 mx-auto border-2 mt-5 p-10 w-90 md:w-130 rounded-3xl">             <!-- Form Section which have input field and Submit option -->
+            <form class="mx-auto my-auto">
+                <label class="font-bold" for="FNM">Student First Name</label><br>
+                <input class="h-10 bg-white rounded-2xl md:w-100 p-4 focus:border-blue-500 focus:border-3 focus:outline-none" id="FNM"  type="text" placeholder="e.g - Pawan"><br><br>
+
+                <label class="font-bold" for="Last_name">Student Last Name</label><br>
+                <input  class="h-10 bg-white rounded-2xl md:w-100 p-4 focus:border-blue-500 focus:border-3 focus:outline-none" id="Last_name" type="text" placeholder="e.g - Yadav"><br><br>
+
+                <label class="font-bold" for="St_id">Student ID</label><br>
+                <input class="h-10 bg-white rounded-2xl md:w-100 p-4 focus:border-blue-500 focus:border-3 focus:outline-none" id="St_id" type="number" placeholder="e.g - 12345"><br><br>
+
+                <label class="font-bold" for="st_emil">Student Email ID</label><br>
+                <input class="h-10 bg-white rounded-2xl md:w-100 p-4 focus:border-blue-500 focus:border-3 focus:outline-none" id="st_emil" type="email" placeholder="e.g - pawan.py1999@gmail.com"><br><br>
+
+                <label class="font-bold" for="St_phn">Student Phone Number</label><br>
+                <input class="h-10 bg-white rounded-2xl md:w-100 p-4 focus:border-blue-500 focus:border-3 focus:outline-none" type="number" id="St_phn" placeholder="e.g - 8209059986"><br><br>
+
+                <div class="flex justify-center">
+                    <button id="Sbmt" class="m-auto bg-blue-600 p-2 w-30 md:w-40 rounded-4xl text-2xl" type="submit">Submit</button>
+                    <button class="m-auto bg-blue-600 p-2 w-30 md:w-40 rounded-4xl text-2xl" type="reset">Clean</button>
+                </div>
+            </form>
+        </article>                                              <!-- Form Section end for input and Submit Button -->
+        <article>                                               <!-- Record Show section start -->
+
+            <div popover id="Student_record" class=" mx-auto my-auto h-100 p-3 border-2 border-black rounded-2xl">
+            </div>
+            
+            <div class="flex justify-center">
+                <button popovertarget="Student_record" id="S_S_R" class="bg-amber-500 m-6 p-2 rounded-2xl text-2xl md:w-120" >Show Student Record</button>
+                
+            </div>
+        </article>                                              <!-- Record Show section end -->
+    </section>                                                  <!-- Form Section end -->
+    <footer class="h-15 bg-black text-white">                                                    
+        <div class="flex justify-center">
+            <p>Email us : pawan.py1999@gmail.com</p>
+        </div>
+        <div class="flex justify-center">
+            Contact us : +91-8209059986
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
